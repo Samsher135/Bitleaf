@@ -106,3 +106,10 @@ ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
   /* about-us on hover content in header*/
   ul#navbar li ul li{ background-color: black; color: white; position: relative; }
   }
+
+  .RPM{
+    color: blue;
+    position: relative;
+    top: 350px;
+    left: 115px;
+  }
