@@ -214,6 +214,7 @@ body {
 }
 
 #main {
+  text-align: center;
   width:720px;
   margin:0 auto;
 }
@@ -228,6 +229,7 @@ body {
   position: relative;
   right: 400px;
 }
+
 
 #test2{
   position: relative;
