@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Template</title>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/head.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script></script> -->
+	<style>
+	.hero {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(bg.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	z-index: 9;
+}
+	</style>
+  </head>
+  <body>
+  {{>header}}
+  {{>Login}}
+	<div id="main">
+  
+		<div class="box" id="test">
+		  
+		  <div class="gauge-wrap" data-value="10"></div>
+		  <h1>Engine RPM</h1>
+		</div>
+		
+		<div class="box" id="test1">
+		  
+		  <div class="gauge-wrap" data-value="20"></div>
+		  <h1>Coolent Temp</h1>
+		</div>
+		
+		<div class="box" id="test2">
+		  
+		  <div class="gauge-wrap" data-value="30"></div>
+		  <h1>Battery Voltage</h1>
+		</div>
+		
+		<div class="box" id="test3">
+		  
+		  <div class="gauge-wrap" data-value="40"></div>
+		  <h1>Fuel Consumed</h1>
+		</div>
+		
+		<div class="box" id="test4">
+		  
+		  <div class="gauge-wrap" data-value="50"></div>
+		  <h1>Engine Load</h1>
+		</div>
+		
+		<div class="box" id="test5">
+		  
+		  <div class="gauge-wrap" data-value="60"></div>
+		  <h1>Fuel Level</h1>
+		</div>
+		
+		<div class="box" id="test6">
+		  
+		  <div class="gauge-wrap" data-value="70"></div>
+		  <h1>Vehicle Speed</h1>
+		</div>
+		
+		<div class="box" id="test7">
+		  
+		  <div class="gauge-wrap" data-value="80"></div>
+		  <h1>MAF Sensor Air Flow Rate</h1>
+		</div>
+		
+		<div class="box" id="test8">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Throttle Position</h1>
+		</div>
+
+		<div class="box" id="test9">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Time Run with MIL on</h1>
+		</div>
+
+		<div class="box" id="test10">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Intake Air Temperature</h1>
+		</div>
+
+		<div class="box" id="test11">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Fuel Pressure</h1>
+		</div>
+
+		<div class="box" id="test12">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Commanded EGR</h1>
+		</div>
+
+		<div class="box" id="test13">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>EGR Error</h1>
+		</div>
+
+		<div class="box" id="test14">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Commanded Evaporative Purge</h1>
+		</div>
+
+		<div class="box" id="test15">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Number of Warmups since DTC Cleared</h1>
+		</div>
+
+		<div class="box" id="test16">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Distance traveled since DTC Cleared</h1>
+		</div>
+
+		<div class="box" id="test17">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Evap. System Vapor Pressure</h1>
+		</div>
+
+		<div class="box" id="test18">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Barometric Pressure</h1>
+		</div>
+
+		<div class="box" id="test19">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Control Module Voltage</h1>
+		</div>
+
+		<div class="box" id="test20">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Monitor Status This Drive Cycle</h1>
+		</div>
+
+		<div class="box" id="test21">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Absolute Load Value</h1>
+		</div>
+
+		<div class="box" id="test22">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Commanded Equivalence Ratio</h1>
+		</div>
+
+		<div class="box" id="test23">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Relative Throttle Position</h1>
+		</div>
+
+		<div class="box" id="test24">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Ambient Air Temperature</h1>
+		</div>
+
+		<div class="box" id="test25">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Commanded Throttle Actuator</h1>
+		</div>
+
+		<div class="box" id="test26">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Time Run with MIL on</h1>
+		</div>
+
+		<div class="box" id="test27">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Time Since DTC Cleared</h1>
+		</div>
+
+		<div class="box" id="test28">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Maximum MAF Airflow Value</h1>
+		</div>
+
+		<div class="box" id="test29">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Fuel Type</h1>
+		</div>
+
+		<div class="box" id="test30">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Ethanol fuel %</h1>
+		</div>
+
+		<div class="box" id="test31">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Engine Oil Temperature</h1>
+		</div>
+
+		<div class="box" id="test32">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Fuel Injection Timing</h1>
+		</div>
+
+		<div class="box" id="test32">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Engine Fuel Rate</h1>
+		</div>
+
+		<div class="box" id="test33">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>Actual Engine Torque - Percent</h1>
+		</div>
+
+		<div class="box" id="test34">
+		  
+		  <div class="gauge-wrap" data-value="90"></div>
+		  <h1>EGR TEmperature</h1>
+		</div>
+	  </div>  
+    <script src="js/indexx.js"></script>
+    <script src="js/index.js"></script>
+	<script>
+	var x = document.getElementById("login");
+	var y = document.getElementById("register");
+	var z = document.getElementById("btn");
+
+	function register() {
+		x.style.left = "-400px";
+		y.style.left = "50px";
+		z.style.left = "110px";
+	}
+
+	function login() {
+		x.style.left = "50px";
+		y.style.left = "450px";
+		z.style.left = "0";
+	}
+    function openForm() {
+	document.getElementById("popup-1").style.display = "block";
+	}
+
+	function closeForm() {
+	document.getElementById("popup-1").style.display = "none";
+	}
+	</script>
+  </body>
+</html>

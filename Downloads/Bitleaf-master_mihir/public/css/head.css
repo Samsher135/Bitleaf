@@ -1,0 +1,289 @@
+/* html document reference */
+html, body{ margin: 0;  padding: 0; }
+
+/*header reference  */
+header{ width: 100%;  height: 60px; background-color: black;  color: white; }
+
+/*reference of logo in header */
+.testLogo{ float: left; width: calc((100%)/6); text-align: center; }
+
+/*search button reference in header */
+#care{ width: calc((100%)/6); text-align: center; float: right; line-height: 60px; }
+
+/*header content reference */
+.navbar { display: block; width: calc((100%)/1.5); float: left; }
+
+/*followig are the header list content reference */
+ul#navbar{ margin: 0; padding: 0; list-style: none; height: 100%; }
+
+ul#navbar li{ float: left; width: calc((100%-20px)/4); height: 100%; background-color: black;
+  line-height: 60px; text-align: center; transition: background-color 1s; }
+
+ul#navbar li a{  text-decoration: none;  cursor: pointer;  }
+
+ul#navbar li:hover{  background-color: #00CED1;  }
+
+/*about-us on hover content in header*/
+ul#navbar li ul{ margin: 0; padding: 0; }
+
+ul#navbar li ul li{  width: 100%;  display: none; z-index: inherit; position: relative;}
+
+ul#navbar li:hover ul li{  display: block; }
+
+/* header list and search icon reference*/
+ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
+
+/*reference of hamburger in the header*/
+.container{ display: none; }
+
+/*search-field reference in header*/
+#searchabaleWidget{ width: 80%; }
+
+/*reference of search icon and search feild in the header*/
+#care button{ display: none; }
+
+/*Header Styles for display size < 800px width */
+@media (max-width: 800px){
+
+	/*logo reference in header */
+  .testLogo{ position: absolute; left: 32%; }
+
+    /*reference of hamburger menu in header*/
+  .container { float: left; display: inline-block; cursor: pointer; margin: 10px; position: absolute; }
+
+    /*reference of hamburger,search-button,search-field,search-icon and logo in the header*/
+  .container, #care, .testLogo{ width: calc((100%-30px)/3); }
+
+   /*following are the references of search-button,search-icon and search-feild in the header */
+  #care{ text-align: -webkit-right; }
+
+  #care button{ margin-right: 10px; margin-top: 10px; display: block; background-color: black; color: white; font-size: 1.7em; }
+
+   /*following are the dropdown properties of search-field and search-icon in header*/
+  .dropdown{ display: none; background: black; top: 60px; width: 100%; border-top: 2px solid grey; position: absolute; left: 0; text-align: center; }
+
+  /*when dropdown class and sys class met ;this property will work*/
+  .dropdown.sys{ display: block; }
+
+   /*following are the hamburger bars properties  */
+  .bar1, .bar2, .bar3 { width: 35px; height: 5px; background-color: #fff; margin: 6px 0; transition: 0.4s; }
+
+  /*first bar property of hamburger*/
+  .change .bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
+
+   /*second bar property of hamburger*/
+  .change .bar2 { opacity: 0;}
+
+   /*third bar property of hamburger*/
+  .change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
+
+  /*header menu lists references*/
+  ul.navbar{ display: none; width: 100%; top: 60px; position: absolute; border-top: 2px solid grey;}
+
+  .navbar.responsive{ display: block; }
+
+  ul#navbar li{ width: 100%; height: auto; display: block; }
+
+/*about-us on hover content in header*/
+  ul#navbar li ul li{ background-color: white; color: black; position: relative; }
+}
+
+/*Header Styles for display size between 601px to 800px width */
+@media (min-width:601px) and (max-width:800px){
+
+	/*logo reference in header*/
+  .testLogo{ left: 20%; }
+
+  /*search button,search-field,search-icon references*/
+  #care button{ display: none; }
+
+  /*properties of search-icon and search icon in the header*/
+  .dropdown{ display: block; background: black; top: 0; border-top: none; position: relative; text-align: center; }
+
+  /*home,about-us,portfolio and contact content in header */
+  ul#navbar li{ float: left; width: calc((100%-20px)/4); }
+
+  /* about-us on hover content in header*/
+  ul#navbar li ul li{ background-color: black; color: white; position: relative; }
+  }
+
+  .gauge-wrap {
+    position:relative;
+    margin:0 0 20px;
+    width:200px;
+    height:100px;
+}
+
+.gauge-core {
+    position:relative;
+    overflow:hidden;
+    height:inherit;
+    width:inherit;
+}
+
+.gauge-wrap-before {
+    position:absolute;
+    width:16px;
+    height:16px;
+    bottom:-7px; /* 1px less to cover clipping */
+    left:0px;
+    clip: rect(8px, 16px, 16px, 0px);
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    z-index:5;
+}
+
+.gauge-wrap-after {
+    position:absolute;
+    width:16px;
+    height:16px;
+    bottom:-7px; /* 1px less to cover clipping */
+    right:0px;
+    clip: rect(8px, 16px, 16px, 0px);
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    z-index:5;
+}
+
+.gauge-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    z-index:0;
+}
+
+.gauge-active-wrap {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 200px;
+    height: 200px;
+    overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+}
+
+.gauge-active {
+    top:100px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    overflow:visible;
+    -webkit-border-radius:0px 0px 200px 200px;
+    -moz-border-radius:0px 0px 200px 200px;
+    border-radius:0px 0px 200px 200px;
+    z-index:1;
+}
+
+.gauge-active-before {
+    position:absolute;
+    width:16px;
+    height:16px;
+    background-color: inherit;
+    top:-7px; /* 1px less to cover clipping */
+    left:0px;
+    clip: rect(0px, 16px, 8px, 0px);
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    z-index:5;
+}
+
+.gauge-cap {
+    position: absolute;
+    top:16px;
+    left:16px;
+    width: 168px;
+    height: 168px;
+    -webkit-border-radius:84px;
+    -moz-border-radius:84px;
+    border-radius:84px;
+  z-index:5;
+}
+
+/* dem */
+
+/* body {
+  background:#2c3e50;
+}
+
+#main {
+  text-align: center;
+  color: #00CED1;
+  width:720px;
+  margin:0 auto;
+}
+
+.box {
+  float:left;
+  padding:20px;
+  width:200px;
+}
+
+#test{
+  position: relative;
+  right: 400px;
+}
+
+
+#test2{
+  position: relative;
+  left: 400px;
+}
+
+#test3{
+  position: relative;
+  right: 400px;
+  top: 100px;
+}
+
+#test4{
+  position: relative;
+  top: 100px;
+}
+
+#test5{
+  position: relative;
+  left: 400px;
+  top: 100px;
+}
+
+#test6{
+  position: relative;
+  right: 400px;
+  top: 200px;
+}
+
+#test7{
+  position: relative;
+  top: 200px;
+}
+
+#test8{
+  position: relative;
+  top: 200px;
+  left: 400px;
+} */
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+#main h1{
+  color: aqua;
+  font-size: 10px;
+  text-align: center;
+}
+
+.box{
+  margin-right: 150px;
+  margin-bottom: 40px;
+}
