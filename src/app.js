@@ -20,8 +20,12 @@ app.get("/", (req, res) =>{
     res.render("index");
 });
 
-app.get("/Login", (req, res) =>{
-    res.render("Login");
+app.get("/Dashboard", (req, res) =>{
+    res.render("Dashboard");
+});
+
+app.get("/warnings", (req, res) =>{
+    res.render("warnings");
 });
 
 app.listen(port, () => {
