@@ -5,7 +5,7 @@
 }
 
 body{
-    background:#263646;
+    background:#282828;
 }
 
 /* .hero {
@@ -17,13 +17,13 @@ body{
 	background-size: cover;
 	position: absolute;
 	z-index: 9;
-} */
-.form-box {
+}
+/*.form-box {
 	width: 380px;
 	height: 480px;
 	position: relative;
 	margin: 6% auto;
-	background: #FFF;
+	background: #282828;
 	padding: 5px;
 	overflow: hidden;
 }
@@ -48,7 +48,7 @@ body{
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: linear-gradient(to right, #ff105f, #ffad06);
+	background: linear-gradient(to right, #fafafb, #ffad06);
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -58,7 +58,7 @@ body{
 }
 .soical-icons .fa {
 	font-size: 40px;
-	/*background: linear-gradient(to right, #ff105f, #ffad06);*/
+	background: linear-gradient(to right, #ff105f, #ffad06);
 	color: #ef741d;
 	margin: 0 12px;
 	cursor: pointer;
@@ -118,7 +118,7 @@ span {
 	padding: 2px 5px 7px 5px;
 	background: #ef741d;
 	}
-
+*/
 
 .img1{
     position: relative;
@@ -145,7 +145,7 @@ span {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	min-height: 70vh;
+	min-height: 80vh;
 }
   
   /* Clear floats after the columns */
@@ -158,20 +158,50 @@ span {
 .card{
 	display: block;
 	padding: 40px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.041);
 	border-radius: 20px;
+	transition: transform .2s;
 }
 
 .card:hover{
 	background-color: white;
-	box-shadow:  5px 5px 15px;
+	box-shadow:  5px 5px 15px black;
+	transform: scale(1.03);
 }
-  
+
 h1 {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 a {
 	text-decoration: none;
+}
+
+.DTC{
+	position: relative;
+	top:60px;
+}
+
+#DTC {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#DTC td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#DTC tr:nth-child(even){background-color: #f2f2f2a2;}
+
+#DTC th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color:rgb(255, 255, 255);
+  color: black;
 }

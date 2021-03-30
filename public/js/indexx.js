@@ -10,8 +10,8 @@
     hueHigh: '128', // Choose the ending hue for the active color (for value 100)
     saturation: '100%', // Saturation for active color
     lightness: '50%', // Lightness for active color
-    gaugeBG: '#23313f', // Background color of Gauge
-    parentBG: '#2c3e50 ' // This color should match the parent div of the gauge (or beyond)
+    gaugeBG: 'rgba(255, 255, 255, 0.041)', // Background color of Gauge
+    parentBG: '#282828' // This color should match the parent div of the gauge (or beyond)
       };
   
   var settings = $.extend({}, defaults, options);

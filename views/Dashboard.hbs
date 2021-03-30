@@ -7,6 +7,7 @@
     <title>Template</title>
     <link rel="stylesheet" href="css/all.min.css"/>
     <link rel="stylesheet" href="css/head.css"/>
+	<link rel="stylesheet" href="css/home.css"/>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- <script></script> -->
@@ -29,73 +30,73 @@
 	<div id="main">
   
 		<div class="box" id="test">
-		  
-		  <div class="gauge-wrap" data-value="10"></div>
+
+		  <div id="chartdiv"></div>
 		  <h1>Engine RPM</h1>
 		</div>
 		
 		<div class="box" id="test1">
-		  
+		  <h2>20&#xb0;C</h2>
 		  <div class="gauge-wrap" data-value="20"></div>
 		  <h1>Coolent Temp</h1>
 		</div>
 		
 		<div class="box" id="test2">
-		  
+		  <h2>10.00 Volts</h2>
 		  <div class="gauge-wrap" data-value="30"></div>
 		  <h1>Battery Voltage</h1>
 		</div>
 		
 		<div class="box" id="test3">
 		  
-		  <div id="chartdiv"></div>
-		  <h1>Fuel Consumed</h1>
-		</div>
-		
-		<div class="box" id="test4">
-		  
 		  <div class="gauge-wrap" data-value="50"></div>
 		  <h1>Engine Load</h1>
 		</div>
 		
+		<div class="box" id="test4">
+			
+		  <div id="chartdiv1"></div>
+		  <h1>Fuel Consumed</h1>
+		</div>
+		
 		<div class="box" id="test5">
-		  
+		  <h2>80 %</h2>
 		  <div class="gauge-wrap" data-value="60"></div>
 		  <h1>Fuel Level</h1>
 		</div>
 		
 		<div class="box" id="test6">
-		  
-		  <div class="gauge-wrap" data-value="70"></div>
+		  <h2>25<br>KMPH</h2>
+		  <div class="gauge-wrap" data-value="55"></div>
 		  <h1>Vehicle Speed</h1>
 		</div>
 		
 		<div class="box" id="test7">
 		  
-		  <div class="gauge-wrap" data-value="80"></div>
+		  <div id="chartdiv2"></div>
 		  <h1>MAF Sensor Air Flow Rate</h1>
 		</div>
 		
 		<div class="box" id="test8">
-		  
+		  <h2>Idle<br>Position</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Throttle Position</h1>
 		</div>
 
 		<div class="box" id="test9">
-		  
+		  <h2>2.5 Hours</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Time Run with MIL on</h1>
 		</div>
 
 		<div class="box" id="test10">
-		  
+		  <h2>20&#xb0;C</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Intake Air Temperature</h1>
 		</div>
 
 		<div class="box" id="test11">
-		  
+		  <h2>45 psi</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Fuel Pressure</h1>
 		</div>
@@ -107,7 +108,7 @@
 		</div>
 
 		<div class="box" id="test13">
-		  
+		  <h2>2 %</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>EGR Error</h1>
 		</div>
@@ -119,31 +120,32 @@
 		</div>
 
 		<div class="box" id="test15">
-		  
+		  <h2>22<br>Warmups</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
-		  <h1>Number of Warmups since DTC Cleared</h1>
+		  <h1>Number of Warmups since<br>DTC Cleared</h1>
 		</div>
 
 		<div class="box" id="test16">
-		  
+		  <h2>220 Kms</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Distance traveled since DTC Cleared</h1>
 		</div>
 
 		<div class="box" id="test17">
-		  
+		  <h2></h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Evap. System Vapor Pressure</h1>
 		</div>
 
 		<div class="box" id="test18">
-		  
+		  <h2>22 in. Hg</h2> 
+		  {{!-- For Ford Vehicles --}}
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Barometric Pressure</h1>
 		</div>
 
 		<div class="box" id="test19">
-		  
+		  <h2>13.1 Volts</h2>
 		  <div class="gauge-wrap" data-value="90"></div>
 		  <h1>Control Module Voltage</h1>
 		</div>
@@ -241,11 +243,17 @@
 		<div class="box" id="test34">
 		  
 		  <div class="gauge-wrap" data-value="90"></div>
-		  <h1>EGR TEmperature</h1>
+		  <h1>EGR Temperature</h1>
 		</div>
 	  </div>  
     <script src="js/indexx.js"></script>
     <script src="js/index.js"></script>
+	<script src="js/graphs.js"></script>
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+	<script src="js/graphs.js"></script>
 	<script>
 	var x = document.getElementById("login");
 	var y = document.getElementById("register");
@@ -269,50 +277,6 @@
 	function closeForm() {
 	document.getElementById("popup-1").style.display = "none";
 	}
-	</script>
-	<script src="https://www.amcharts.com/lib/4/core.js"></script>
-	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-	<script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
-	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-	<script>
-		am4core.useTheme(am4themes_dark);
-		am4core.useTheme(am4themes_animated);
-		// Themes end
-
-		var chart = am4core.create("chartdiv", am4charts.XYChart);
-
-		var data = [];
-		var value = 50;
-		for(let i = 0; i < 300; i++){
-		let date = new Date();
-		date.setHours(0,0,0,0);
-		date.setDate(i);
-		value -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-		data.push({date:date, value: value});
-		}
-
-		chart.data = data;
-
-		// Create axes
-		var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-		dateAxis.renderer.minGridDistance = 60;
-
-		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-		// Create series
-		var series = chart.series.push(new am4charts.LineSeries());
-		series.dataFields.valueY = "value";
-		series.dataFields.dateX = "date";
-		series.tooltipText = "{value}"
-
-		series.tooltip.pointerOrientation = "vertical";
-
-		chart.cursor = new am4charts.XYCursor();
-		chart.cursor.snapToSeries = series;
-		chart.cursor.xAxis = dateAxis;
-
-		//chart.scrollbarY = new am4core.Scrollbar();
-		chart.scrollbarX = new am4core.Scrollbar();
 	</script>
   </body>
 </html>

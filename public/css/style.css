@@ -5,7 +5,7 @@
 }
 
 body{
-    background:#263646;
+    background:#282828;
 }
 
 /* .hero {
@@ -23,7 +23,7 @@ body{
 	height: 480px;
 	position: relative;
 	margin: 6% auto;
-	background: #FFF;
+	background: #282828;
 	padding: 5px;
 	overflow: hidden;
 }
@@ -31,8 +31,9 @@ body{
 	width: 220px;
 	margin: 35px auto;
 	position: relative;
-	box-shadow: 0 0 20px 9px #ff61241f;
+	box-shadow: 0 0 20px 9px #f6f8f800;
 	border-radius: 30px;
+	border:2px solid white;
 }
 .toggle-btn {
 	padding: 10px 30px;
@@ -48,7 +49,7 @@ body{
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: linear-gradient(to right, #ff105f, #ffad06);
+	background: rgb(231, 231, 231);
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -89,7 +90,7 @@ body{
 	cursor: pointer;
 	display: block;
 	margin:  auto;
-	background: linear-gradient(to right, #ff105f, #ffad06);
+	background: rgb(223, 223, 223);
 	border-radius: 30px;
 }
 span {
@@ -108,15 +109,15 @@ span {
 
 .close-btn {
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	right: 8px;
+	top: 8px;
 	width: 30px;
 	height: 30px;
 	color: white;
 	font-size: 30px;
 	border-radius: 50%;
 	padding: 2px 5px 7px 5px;
-	background: #ef741d;
+	background: #282828;
 	}
 
 .img2{

@@ -28,6 +28,10 @@ app.get("/warnings", (req, res) =>{
     res.render("warnings");
 });
 
+app.get("/navigation", (req, res) =>{
+    res.render("navigation");
+});
+
 app.listen(port, () => {
     console.log(`listening to ${port}`);
   })

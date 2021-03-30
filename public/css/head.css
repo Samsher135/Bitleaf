@@ -2,7 +2,7 @@
 html, body{ margin: 0;  padding: 0; }
 
 /*header reference  */
-header{ width: 100%;  height: 60px; background-color: black;  color: white; z-index: 9; position: fixed;}
+header{ width: 100%;  height: 60px; background-color: black;  color: white; z-index: 9; position: fixed; box-shadow:3px 0px 5px black;}
 
 /*reference of logo in header */
 .testLogo{ float: left; width: calc((100%)/6); text-align: center; }
@@ -132,6 +132,7 @@ ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
     -moz-border-radius:8px;
     border-radius:8px;
     z-index:5;
+    display: none;
 }
 
 .gauge-wrap-after {
@@ -145,6 +146,7 @@ ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
     -moz-border-radius:8px;
     border-radius:8px;
     z-index:5;
+    display: none;
 }
 
 .gauge-bg {
@@ -204,7 +206,7 @@ ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
     -webkit-border-radius:84px;
     -moz-border-radius:84px;
     border-radius:84px;
-  z-index:5;
+    z-index:5;
 }
 
 /* dem */
@@ -275,20 +277,45 @@ ul#navbar li .search-icon{  font-size: 20px; line-height: 40px;  }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  position:relative;
+  top:100px;
 }
 
 #main h1{
-  color: aqua;
-  font-size: 10px;
+  color: whitesmoke;
+  font-size: 12px;
   text-align: center;
 }
 
 .box{
-  margin-right: 150px;
-  margin-bottom: 40px;
-  margin-top: 60px;
+  margin-right:4px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  background-color: rgba(255, 255, 255, 0.041);
+  border-radius: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transition: transform .2s;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+.box h2{
+  position: relative;
+  z-index: 8;
+  top:80px;
+  text-align: center;
+  font-size: medium;
+}
+
+/* .box:hover{
+  box-shadow: 2px 2px 5px black;
+  transform: scale(1.1);
+}  */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -297,6 +324,20 @@ body {
 body { background-color: #30303d; color: #fff; }
 
 #chartdiv {
-	width: 200px;
+	width: 500px;
 	height: 200px;
   }
+
+#chartdiv1 {
+  width: 500px;
+  height: 200px;
+  }
+
+#chartdiv2 {
+  width: 500px;
+  height: 200px;
+  }
+
+a {
+  color: white;
+}
