@@ -157,6 +157,7 @@ router.post("/login", async (req, res) => {
 
 router.get('/getUserDetails', authenticate, async (req, res) => {
     console.log(`my detals: ${req.rootUser} `);
+    // console.log(req.rootUser.name)
     res.send(req.rootUser);
 })
 

@@ -7,6 +7,8 @@ const Secret = () => {
     
     const history = useHistory();
     const [userData, setUserData] = useState({name:"", email:"", phone:""});
+    var x = 0;
+
 
     const callSecret = async () => {
         try {
@@ -119,7 +121,7 @@ const Secret = () => {
                                                 <label>Profession</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>{ userData.work }</p>
+                                                <p>{ userData.Coolent_temp_value }</p>
                                             </div>
                                         </div>
                             </div>
