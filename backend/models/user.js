@@ -65,6 +65,8 @@ const userSchema = new mongooose.Schema({
 
 
 
+
+
 // we need to hash the password here, so we will called the Pre function with save as a type of EVENT
 // followed by the callback func 
 userSchema.pre("save", async function (next) {
@@ -109,3 +111,4 @@ userSchema.methods.addMessage = async function (name, email, phone, message) {
 const User = mongooose.model('USER', userSchema);
 
 module.exports = User;
+

@@ -8,6 +8,7 @@ const authenticate = require("../middleware/authenticate");
 
 require('../db/conn');
 const User = require('../models/user');
+const Parameters = require("../models/parameters");
 
 router.get('/', (req, res) => {
     res.send("Hello from the router side");
@@ -52,7 +53,9 @@ router.get("/secret", authenticate, (req, res) => {
 
 router.get("/dashboard", authenticate, (req, res) => {
     console.log("Hello from the secret page");
-    res.send(req.rootUser);
+    res.send(req.Allparameters);
+    // res.write(req.Allparameters);
+    // res.end();
 });
 
 
@@ -83,10 +86,15 @@ router.post("/register", async (req, res) => {
         } else {
             // creating a new documents to be stored 
             const user = new User({ name, email, phone, work, password, cpassword });
+            const parameter1 = new Parameters({parameter_name: "Coolent Temp", value: 30});
+            const parameter2 = new Parameters({parameter_name: "Battery Voltage", value: 90});
 
             // saving the data to the database 
             const userRegister = await user.save();
+            const Parameter1 = await parameter1.save();
+            const Parameter2 = await parameter2.save();
             console.log(`${user} user Registered successfully`);
+
             // return userRegister;
             // res.status(201).render('sigin');
             res.status(201).json({ message: "User Registered successfully" });

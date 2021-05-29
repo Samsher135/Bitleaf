@@ -1,6 +1,8 @@
 import React, { useEffect, useState, Component } from 'react'
 import { NavLink, useHistory } from 'react-router-dom';
-import GaugeChart from 'react-gauge-chart'
+import GaugeChart from 'react-gauge-chart';
+
+import MyChart from "../component/lineChart";
 
 var p_value = 50;
 var p1_value = 10;  
@@ -12,7 +14,7 @@ const Dashboard = () => {
 
     const callSecret = async () => {
         try {
-            const res = await fetch("/secret", {
+            const res = await fetch("/dashboard", {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -26,9 +28,9 @@ const Dashboard = () => {
             // const str1 = Coolent_temp_value;
             // const str = Coolent_temp_value/100;
 
-            console.log(data.name);
-            p_value = data.Coolent_temp_value;
-            p1_value = data.Battery_Voltage;
+            console.log(data);
+            p_value = data[0].value;
+            p1_value = data[1].value;
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -59,7 +61,7 @@ const Dashboard = () => {
   
   <div className="box" id="test">
 
-    <div id="chartdiv"></div>
+    <MyChart/>
     <h1>Engine RPM</h1>
   </div>
   
@@ -92,7 +94,7 @@ const Dashboard = () => {
   
   <div className="box" id="test4">
     
-    <div id="chartdiv1"></div>
+    <MyChart/>
     <h1>Fuel Consumed</h1>
   </div>
   
@@ -115,7 +117,7 @@ const Dashboard = () => {
   
   <div className="box" id="test7">
     
-    <div id="chartdiv2"></div>
+    <MyChart/>
     <h1>MAF Sensor Air Flow Rate</h1>
   </div>
   

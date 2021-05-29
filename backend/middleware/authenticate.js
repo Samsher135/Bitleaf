@@ -2,6 +2,7 @@
 // import User from "../models/user";
 
 const jwt = require("jsonwebtoken");
+const Parameters = require("../models/parameters");
 const User = require("../models/user");
 
 const authenticate = async (req, res, next) => {
@@ -11,11 +12,13 @@ const authenticate = async (req, res, next) => {
         const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
 
         const rootUser = await User.findOne({ _id: verifyToken._id, 'tokens.token': token });
+        const Allparameters = await Parameters.find();
+
 
         if (!rootUser) {
             throw new Error("User cannot find!!");
         }
-
+        req.Allparameters = Allparameters;
         req.token = token;
         req.rootUser = rootUser;
         req.userID = rootUser._id;
